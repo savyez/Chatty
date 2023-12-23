@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Room, Message
 
@@ -27,3 +28,11 @@ def checkview(request):
         new_room.save()
         return redirect('/'+room+'/?username='+username)
 
+def send(request):
+    message = request.POST['message']
+    room_id = request.POST['room_id']
+    username = request.POST['username']
+
+    new_message = Message.objects.create(value=message, user=username, room=room_id)
+    new_message.save()
+    return HttpResponse('Message sent succesfully!')
