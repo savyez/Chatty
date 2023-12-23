@@ -67,7 +67,7 @@ body {
 
 </div>
 
-<!-- <script>
+<script>
 $(document).ready(function(){
 
 setInterval(function(){
@@ -84,12 +84,12 @@ setInterval(function(){
             }
         },
         error: function(response){
-            alert('An error occured')
+            // alert('An error occured')
         }
     });
 },1000);
 })
-</script> -->
+</script>
 
 
 <div class="container">
@@ -152,7 +152,7 @@ setInterval(function(){
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        alert(data)
+        // alert(data)
       }
     });
     document.getElementById('message').value = ''

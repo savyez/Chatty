@@ -6,8 +6,6 @@ from datetime import datetime
 class Room(models.Model):
     name = models.CharField(max_length = 50)
 
-    def __str__(self) -> str:
-        return self.name.__str__()
     
 class Message(models.Model):
     value = models.CharField(max_length=512)
